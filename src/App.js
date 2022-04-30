@@ -1,12 +1,12 @@
 import './App.css';
-import ClassComponent from './components/ClassComponent';
-import FunctionalComponent from './components/FunctionalComponent';
+import JsxComponent from './components/JsxComponent';
+import NoJsxComponent from './components/NoJsxComponent';
 
 function App() {
   return (
     <div className="App">
-      <ClassComponent />
-      <FunctionalComponent />
+      <JsxComponent />
+      <NoJsxComponent />
     </div>
   );
 }
