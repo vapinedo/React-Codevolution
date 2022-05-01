@@ -1,12 +1,10 @@
 import './App.css';
-import JsxComponent from './components/JsxComponent';
-import NoJsxComponent from './components/NoJsxComponent';
+import Message from './components/Message';
 
 function App() {
   return (
     <div className="App">
-      <JsxComponent />
-      <NoJsxComponent />
+      <Message />
     </div>
   );
 }
