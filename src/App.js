@@ -1,10 +1,10 @@
 import './App.css';
-import Counter from './components/Counter';
+import EventBind from './components/EventBind';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <EventBind />
     </div>
   );
 }

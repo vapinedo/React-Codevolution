@@ -1,32 +1,31 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class Counter extends Component {
+  constructor(props) {
+    super(props);
 
-    constructor(props) {
-        super(props)
+    this.state = {
+      count: 0,
+    };
+  }
 
-        this.state = {
-            count: 0
-        }
-    }
+  increment() {
+    // this.setState({
+    //     count: this.state.count + 1
+    // })
+    this.setState((prevState) => ({
+      count: prevState.count + 1,
+    }));
+    console.log(this.state.count);
+  }
 
-    increment() {
-        // this.setState({
-        //     count: this.state.count + 1
-        // })
-        this.setState(prevState => ({
-            count: prevState.count + 1
-        }))
-        console.log(this.state.count)
-    }
-
-    incrementFive() {
-        this.increment()
-        this.increment()
-        this.increment()
-        this.increment()
-        this.increment()
-    }
+  incrementFive() {
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
+    this.increment();
+  }
 
   render() {
     return (
@@ -34,8 +33,8 @@ class Counter extends Component {
         Count - {this.state.count}
         <button onClick={() => this.incrementFive()}>Increment</button>
       </div>
-    )
+    );
   }
 }
 
-export default Counter
+export default Counter;
