@@ -1,16 +1,16 @@
-import React from 'react'
-import Columns from './Columns'
+import React from "react";
+import Columns from "./Columns";
 
 function Table() {
   return (
     <table>
-        <tbody>
-            <tr>
-                <Columns />
-            </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <Columns />
+        </tr>
+      </tbody>
     </table>
-  )
+  );
 }
 
-export default Table
+export default Table;

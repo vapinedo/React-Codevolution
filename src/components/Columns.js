@@ -4,8 +4,8 @@ function Columns() {
   const items = [];
   return (
     <>
-        <td>Name</td>
-        <td>Valp</td>
+      <td>Name</td>
+      <td>Valp</td>
     </>
   );
 }
