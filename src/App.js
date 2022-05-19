@@ -1,12 +1,24 @@
 import './App.css';
-import FRParentInput from './components/FRParentInput';
+import ErrorBoundary from './components/ErrorBoundary';
+import Hero from './components/Hero';
 
 function App() {
   return (
     <div className="App">
-      <FRParentInput />
+      <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary>
     </div>
   );
 }
 
 export default App;
+
