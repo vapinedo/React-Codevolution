@@ -9,31 +9,16 @@ class Counter extends Component {
     };
   }
 
-  increment() {
-    // this.setState({
-    //     count: this.state.count + 1
-    // })
-    this.setState((prevState) => ({
-      count: prevState.count + 1,
-    }));
-    console.log(this.state.count);
-  }
-
-  incrementFive() {
-    this.increment();
-    this.increment();
-    this.increment();
-    this.increment();
-    this.increment();
-  }
+  incrementCount = () => {
+    this.setState((prevState) => {
+      return { count: prevState.count + 1 };
+    });
+  };
 
   render() {
-    return (
-      <div>
-        Count - {this.state.count}
-        <button onClick={() => this.incrementFive()}>Increment</button>
-      </div>
-    );
+    return <div>
+      {this.props.render(this.state.count, this.incrementCount)}
+    </div>;
   }
 }
 
